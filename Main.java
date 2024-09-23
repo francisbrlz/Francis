@@ -27,6 +27,7 @@ public class Main {
      main = false ;
      boolean CHECK = false;
      double total = 0;
+     double subtotal = 0;
 
      while (condition.equalsIgnoreCase("yes")) {
 
@@ -68,16 +69,17 @@ public class Main {
                 if (CHECK == true) {
                     System.out.println("you choose" + productname + "for php"  + price + "\n ENTER QNTYTY");
                     double QNTYTY = input.nextDouble();
-                    double subtotal = price * QNTYTY;
+                    subtotal = price * QNTYTY;
                     total += subtotal;
-                    System.out.println("subtotal: " + QNTYTY + "*" + price + "=php" + subtotal);
+                    System.out.println("subtotal:" + total);
                     System.out.println("do you want to other other item? yes or n");
                     condition = input.next();
-
-
                 }
                 if (condition.equalsIgnoreCase("n")){
+                System.out.println("subtotal"+ subtotal);
                 System.out.println("TOTAL: PHP" + total);
+
+
                 double payment = 0;
 
                 do {
